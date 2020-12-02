@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head> 
+    <meta charset="utf-8"/> 
+    <title>Student3</title>
+    <link rel="stylesheet" href="Student3.css">
+</head>
+<body>
+
+  <header>
+    <ul>
+        <li><a href="index.html #projects">Back</a></li>
+    </ul>
+</header>
+
+<section>
+  <div class="container">
+    <h2 style="color: seashell;">Binary to Base 10</h2>
+
+<img id="myImage" src="baseTen.png" style="width:300px">
+<p style="color: seashell;">Enter any number in Base 2 from 1-9 in 4 bits:</p>
+<p><input type="number" id="inputBin" value=""></p>
+
+
+<button onclick="binToHex()">Submit</button>
+
+<p style="color: aliceblue;">Base 10 Value : </p>
+<p id="demo" style="color: greenyellow;"></p>
+</div>
+</section>
+
+<script>
+function binToHex() {
+  var x = document.getElementById("inputBin").value;
+  var hexOut = parseInt(x , 2).toString(16).toUpperCase();
+  document.getElementById("demo").innerHTML = hexOut;
+  }
+</script>
+
+
+
+
+
+
+
+
+<h2 style="color: aliceblue;">Binary Addition</h2>
+<img id="myImage" src="adding-binary-numbers-l.jpg" style="width:700px"><p></p>
+<a href="index.html #projects"><button>Back  </button></a>
+
+
+<script type="text/javascript">
+  window.addEventListener('scroll', function(){
+      var header = document.querySelector('header');
+      header.classList.toggle('sticky', window.scrollY > 0);
+  })
+</script>
+
+</body>
+</html>

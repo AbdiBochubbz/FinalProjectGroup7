@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<head> 
+    <meta charset="utf-8"/> 
+    <title>Student3</title>
+    <link rel="stylesheet" href="Student2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <header>
+        <ul>
+            <li><a href="index.html #projects">Back</a></li>
+        </ul>
+    </header>
+
+    <section1>
+        <h2>Binary to Hexidecimal Converter</h2>
+        <p>This webpage converta 4 digit binary numbers to to hexidecimal numbers.
+        </p>
+        <hr>	
+        
+        
+        <p><img src="bintohex.jpeg"></p>
+                
+                    
+                 
+        <input type="number" id="inputBin" value="">
+        
+        <p>Enter a 4 digit binary number:</p>
+        
+        <button onclick="binToHex()">Convert</button>
+        
+        <p>Value in Hexidecimal: </p>
+        <p id="demo"></p>
+        
+        <script>
+        function binToHex() {
+          var x = document.getElementById("inputBin").value;
+          var hexOut = parseInt(x , 2).toString(16).toUpperCase();
+          document.getElementById("demo").innerHTML = hexOut;
+          }
+        </script>
+        </section>
+
+    <section1>
+        <h2>Decimal to ASCII Converter</h2>
+        <p> This webpage converts decimal numbers to ASCII. You can refer to the table below to see that the program is working properly. If you are interested in them<br> 
+        the ASCII character equivalents for octal, hexidecimal and binary numbers can also be seen in the table.</p>
+        <hr>	
+        
+        
+        <p><img src="ascii.png" style="width:792px;height:528px;"></p>
+                
+                    
+        
+        <p></p>
+        <p></p>         
+        
+        
+        <p>Enter any (decimal) number from 0 to 127 :</p>
+        <input id="inputdec" >
+        <p></p>
+        <button onclick="decToASCII()">Convert</button>
+        <p></p>
+        <p>Value in ASCII: </p>
+        <p id="demo"></p>
+        
+        <script>
+        function decToASCII() {
+          x = document.getElementById("inputdec").value;
+          var res = String.fromCharCode(x);
+          document.getElementById("demo").innerHTML = res;
+          console.log(res);
+        }
+        </script>
+        </section>
+
+        <style>
+            img {
+              float: left;
+             padding-right: 40px; 
+             padding-left: 40px;
+             padding-bottom: 40px;
+             
+            }
+            </style>
+            
+
+            <section2>
+                <h2>UNICODE Converter</h2>
+                <hr>
+                <p>This webpage converts hexidecimal numbers to different symbols and words using unicode. You can refer to the pictures or tables below to see the <br>
+                convertions that can be made.
+                </p>
+                <center>
+                <p>Please enter UNICODE number:</p>
+                
+                <input id="numb" type="text">
+                
+                <button type="button" onclick="myFunction()">Convert</button>
+                <br>
+                <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+                 
+                  <tr>
+                    <th><center><p id="demo"></center></p></th>
+                  </tr>
+                  
+                </table>
+                
+                <p><img src="uni1.jpeg" style="width:700px;height:400px;"></p>
+                <p><img src="uni3.jpg" style="width:700px;height:400px;"></p>        
+                <p><img src="uni4.jpg" style="width:700px;height:400px;"></p>  			
+                <p><img src="uni2.png" style="width:1100px;height:700px;"></p>  			
+                
+                <p></p>
+                <p></p>         
+                
+                <br>
+                
+                
+                </center>
+                
+                <script>
+                function myFunction() {
+                  var x, text;
+                
+                  // Get the value of the input field with id="numb"
+                  x = document.getElementById("numb").value;
+                
+                  
+                    text = x;
+                    unicode = ("&#x" + x)
+                  
+                  document.getElementById("demo").innerHTML = unicode;
+                }
+                </script>
+                
+                
+                </section>
+        
+
+                <script type="text/javascript">
+                    window.addEventListener('scroll', function(){
+                        var header = document.querySelector('header');
+                        header.classList.toggle('sticky', window.scrollY > 0);
+                    })
+                </script>
+
+
+</body>
+</html>
